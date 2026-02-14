@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win or Lose - Elige tu Suerte</title>
+    <meta name="description" content="Un juego sencillo de azar con botones vibrantes y resultados instantáneos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="container">
+        <header>
+            <h1 class="title">Win or Lose</h1>
+            <p class="subtitle">Elige un color y descubre tu destino</p>
+        </header>
+
+        <main class="game-area">
+            <div class="result-display" id="result-display">
+                <div class="glass-card" id="result-card">
+                    <span id="result-text">¡Mucha Suerte!</span>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="btn-red" class="game-btn red" aria-label="Elegir Rojo">
+                    <span class="btn-ripple"></span>
+                    <span class="btn-content">Rojo</span>
+                </button>
+                <button id="btn-green" class="game-btn green" aria-label="Elegir Verde">
+                    <span class="btn-ripple"></span>
+                    <span class="btn-content">Verde</span>
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Juega las veces que quieras</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
