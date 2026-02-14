@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function play(color) {
         // Clear previous state
         resultCard.classList.remove('win', 'lose', 'animate-pop');
-        
+
         // Trigger reflow to restart animation
         void resultCard.offsetWidth;
 
@@ -23,6 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update UI
         resultText.textContent = outcome.text;
         resultCard.classList.add(outcome.class, 'animate-pop');
+
+        // Visual Effects
+        if (outcome.class === 'win') {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#10b981', '#34d399', '#ffffff']
+            });
+        } else {
+            document.body.classList.remove('body-lose');
+            void document.body.offsetWidth; // trigger reflow
+            document.body.classList.add('body-lose');
+        }
 
         // Console log for debugging
         console.log(`Jugaste con el color ${color}. Resultado: ${outcome.text}`);
